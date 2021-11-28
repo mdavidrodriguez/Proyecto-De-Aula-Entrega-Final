@@ -22,7 +22,7 @@ public class VentanaConsultaDestinatario extends JDialog {
     private JTextField tFiltro;
     private JTable tabla;
     private DefaultTableModel modeloTabla;
-    private String titulos[] = {"Num Paquete", "Dia", "Mes", "Año", "Calle/Carrera", "Telefono", "Codigo Postal", "Num Vivienda"};
+    private String titulos[] = {"Num Paquete", "Dia", "Mes", "Año","Nombre", "Calle/Carrera", "Telefono", "Codigo Postal", "Num Vivienda"};
     private RegistroDestinatario modelo;
     
     public VentanaConsultaDestinatario(JFrame frame, boolean bln) {
@@ -68,7 +68,7 @@ public class VentanaConsultaDestinatario extends JDialog {
             List<RegistroD> lista = this.modelo.leer();
             this.modeloTabla.setNumRows(0);
             for (RegistroD rd : lista) {
-                String fila[] = {String.valueOf(rd.getNumPaquete()), String.valueOf(rd.getDia()), String.valueOf(rd.getMes()), String.valueOf(rd.getAno()),rd.getCalleYCarrera(), rd.getTelefono(), String.valueOf(rd.getCodPostal()),String.valueOf(rd.getNumVivienda())};
+                String fila[] = {String.valueOf(rd.getNumPaquete()), String.valueOf(rd.getDia()), String.valueOf(rd.getMes()), String.valueOf(rd.getAno()),String.valueOf(rd.getNombre()),rd.getCalleYCarrera(), rd.getTelefono(), String.valueOf(rd.getCodPostal()),String.valueOf(rd.getNumVivienda())};
                 if (filtro != null) {
                     if (rd.getNombre().toUpperCase().contains(filtro.toUpperCase())) {
                         this.modeloTabla.addRow(fila);

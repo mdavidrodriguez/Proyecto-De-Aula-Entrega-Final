@@ -177,13 +177,16 @@ public class VentanaRegistroRemitente extends JDialog {
         } catch (NullPointerException ne) {
             VentanaEmergente.msgConfirmacion("Validacion", ne.getMessage(), JOptionPane.ERROR_MESSAGE, this);
         }
-        
+
     }
 
-    public RegistroR eliminado() {
-        RegistroR r = new RegistroR();
-        r.setNombre(this.tNombre.getText());
-        return r;
+    public RegistroR eliminado() throws IOException {
+        RegistroR eliminado = modelo.eliminar(this.tNombre.getText());
+        if (eliminado != null) {
+            System.out.println(eliminado);
+        } else {
+        }
+        return null;
     }
 
     class clickBotonGuardar implements ActionListener {
@@ -195,11 +198,11 @@ public class VentanaRegistroRemitente extends JDialog {
 
     }
 
-    public void eliminar() {
+    public void eliminar() throws IOException {
         RegistroR r = this.eliminado();
         try {
             this.modelo.eliminar(nombre);
-            VentanaEmergente.msgConfirmacion("Eliminado Exitoso", "La eliminacion  fue exitoso", JOptionPane.INFORMATION_MESSAGE, this);
+            VentanaEmergente.msgConfirmacion("Eliminado Exitoso", "Registro Eliminado Correctamente", JOptionPane.INFORMATION_MESSAGE, this);
 
         } catch (IOException ex) {
             VentanaEmergente.msgConfirmacion("Excepcion", ex.getMessage(), JOptionPane.ERROR_MESSAGE, this);
@@ -211,17 +214,16 @@ public class VentanaRegistroRemitente extends JDialog {
     }
 
     class clickBotonEliminar implements ActionListener {
-
         @Override
         public void actionPerformed(ActionEvent e) {
-            eliminar();
+            try {
+                eliminar();
+            } catch (IOException ex) {
+                System.out.println("Eliminado");;
+            }
 
         }
 
     }
-    
-    
 
 }
-
-
