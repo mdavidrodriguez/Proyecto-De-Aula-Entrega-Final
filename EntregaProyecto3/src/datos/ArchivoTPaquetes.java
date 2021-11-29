@@ -102,7 +102,7 @@ public class ArchivoTPaquetes {
             }
         }
     }
-    
+
     public RegistroPaquetes buscar(String volumen) throws IOException {
         RegistroPaquetes buscado = null;
 
@@ -110,12 +110,12 @@ public class ArchivoTPaquetes {
             this.aLectura = new Scanner(this.archivo);
             while (this.aLectura.hasNext()) {
                 RegistroPaquetes tp = this.leerRegistroPaquetes(this.aLectura.nextLine().split(";"));
-                if (tp.getVolumen().equals(volumen)){
+                if (tp.getVolumen().equals(volumen)) {
                     buscado = tp;
                     break;
                 }
             }
-            
+
             return buscado;
         } catch (FileNotFoundException ex) {
             throw new IOException("No fue posible abrir el archivo para leer");

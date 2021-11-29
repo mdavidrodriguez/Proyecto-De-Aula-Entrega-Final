@@ -18,7 +18,7 @@ public class VentanaRegistroPaquetes extends JDialog {
     private JPanel panelDatos, panelBotones;
     private JLabel lTipoPaquete, lPeso, lLargo, lAncho, lAlto, lVolumen, lRepartidor, lCodPostal;
     private JTextField tPeso, tLargo, tAncho, tAlto, tVolumen;
-    private JButton bGuardar, bELiminar;
+    private JButton bGuardar;
     private JComboBox cbTipoPaquete, cbCodPostal, cbRepartidor;
     private final RegistrodePaquetes modelo;
 
@@ -120,12 +120,9 @@ public class VentanaRegistroPaquetes extends JDialog {
         panel.setLayout(new GridLayout(4, 1, 5, 5));
 
         this.bGuardar = new JButton("Guardar");
-        this.bELiminar = new JButton("Eliminar");
 
         panel.add(this.bGuardar);
         this.bGuardar.addActionListener(new clickBotonGuardar());
-        panel.add(this.bELiminar);
-        this.bELiminar.addActionListener(new clickBotonEliminar());
 
         this.panelBotones = new JPanel();
         this.panelBotones.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -180,16 +177,6 @@ public class VentanaRegistroPaquetes extends JDialog {
     }
 
     public void eliminar() {
-
-    }
-
-    class clickBotonEliminar implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            eliminar();
-
-        }
 
     }
 

@@ -1,7 +1,7 @@
 package entidades;
 
 public class RegistroPaquetes {
-
+    
     private String TipoPaquete;
     private int pesop;
     private int Largo;

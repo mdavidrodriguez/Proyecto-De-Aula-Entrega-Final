@@ -28,7 +28,7 @@ public class VentanaConsultaDestinatario extends JDialog {
     public VentanaConsultaDestinatario(JFrame frame, boolean bln) {
         super(frame, bln);
         this.modelo = new RegistroDestinatario();
-        this.setTitle("Consulta Registro Remitente");
+        this.setTitle("Consulta Registro Destinatario");
         this.iniciarComponentes();
         //this.pack(); 
         this.setSize(900, 400);

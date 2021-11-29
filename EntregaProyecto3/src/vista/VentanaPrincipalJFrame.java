@@ -41,7 +41,7 @@ public class VentanaPrincipalJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Harlow Solid Italic", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("Delivery – Upar");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 280, 70));
@@ -50,11 +50,14 @@ public class VentanaPrincipalJFrame extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logotipo2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
-        jMenuBar1.setBackground(new java.awt.Color(0, 255, 255));
+        jMenuBar1.setBackground(new java.awt.Color(0, 204, 255));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         jMenu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu1.setText("Registros");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu1.setAutoscrolls(true);
+        jMenu1.setBorderPainted(true);
+        jMenu1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
 
         jMenuItem1.setText("Remitente");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +87,10 @@ public class VentanaPrincipalJFrame extends javax.swing.JFrame {
 
         jMenu2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu2.setText("Consultas");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenu2.setAutoscrolls(true);
+        jMenu2.setBorderPainted(true);
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenu2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
 
         jMenuItem4.setText("Remitentes");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
