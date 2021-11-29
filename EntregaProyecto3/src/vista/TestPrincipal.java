@@ -125,7 +125,7 @@ public class TestPrincipal extends javax.swing.JFrame {
         String usuario = jTextField1.getText();
         String paswd = jPasswordField1.getText();
         
-        new VentanaPrincipalJFrame().setVisible(true);
+        
         
         if(usuario.isEmpty() || paswd.isEmpty()){
             JOptionPane.showMessageDialog(null, "Algún campo esta vacio");
@@ -134,6 +134,7 @@ public class TestPrincipal extends javax.swing.JFrame {
              if(usuario.equals("Yoriel") && paswd.equals("1234") || usuario.equals("Mateo") && paswd.equals("4321")  || usuario.equals("Jairo Seoanes") && paswd.equals("2021") ){
                  JOptionPane.showMessageDialog(null,"Bienvenido al Sistema");
                  this.dispose();
+                 new VentanaPrincipalJFrame().setVisible(true);
              }else{
                  JOptionPane.showConfirmDialog(null,"Su usuario o contraseña es incorrecto");
              }
